@@ -2,12 +2,13 @@ Java 8, Spring Boot, Spring Data, Apache Maven. БД H2
 
 
 _____________________________________________________________
-Information /////////////////////////////////////////////////
+Information:
+
 Файл postman.json для імпотру колекції в Postman.
 
 
 _____________________________________________________________
-Generation token ////////////////////////////////////////////
+Generation token:
 
 Post: /authenticate
 Body: 
@@ -15,7 +16,8 @@ Body:
     "name": "root"
 }
 _____________________________________________________________
-User controller /////////////////////////////////////////////
+User controller:
+
 Header: Key = Authorization, Value = Token
 
 Дістати всіх Users, в яких age більше за якесь значення
@@ -31,7 +33,8 @@ Get: /user/distinct
 Post: /user/add
 
 _____________________________________________________________
-Article controller //////////////////////////////////////////
+Article controller:
+
 Header: Key = Authorization, Value = Token
 
 Зберегти Article
