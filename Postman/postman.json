@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "739cbe4c-acc3-442b-8b80-a826bcff533e",
+		"name": "Postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Article",
+			"item": [
+				{
+					"name": "AddArticle",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb290IiwiZXhwIjoxNjU2MjY5ODEyLCJpYXQiOjE2NTYyMzM4MTJ9.j8Ts7kgdok-y0xviiR1TBi2WVCo6Wj8AYaoI7cS5Qww",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": 1,\n    \"text\": \"Text\",\n    \"color\": \"GREEN\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/article/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"article",
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "UsersOlderThan",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb290IiwiZXhwIjoxNjU2MjcwMDU3LCJpYXQiOjE2NTYyMzQwNTd9.iPJttC3fiFKkExzboxiJ8uaBWz72j0QajizU7OE1nIQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/users_older_than?age=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users_older_than"
+							],
+							"query": [
+								{
+									"key": "age",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UsersByArticleColor",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb290IiwiZXhwIjoxNjU2MjcwMDU3LCJpYXQiOjE2NTYyMzQwNTd9.iPJttC3fiFKkExzboxiJ8uaBWz72j0QajizU7OE1nIQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/users_by_article_color?color=green",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users_by_article_color"
+							],
+							"query": [
+								{
+									"key": "color",
+									"value": "green"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb290IiwiZXhwIjoxNjU2MjcwMDU3LCJpYXQiOjE2NTYyMzQwNTd9.iPJttC3fiFKkExzboxiJ8uaBWz72j0QajizU7OE1nIQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"user\",\n    \"age\": 21\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/user/add",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DistinctUsersWhereArticleMoreThree",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb290IiwiZXhwIjoxNjU2MjcwMDU3LCJpYXQiOjE2NTYyMzQwNTd9.iPJttC3fiFKkExzboxiJ8uaBWz72j0QajizU7OE1nIQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/user/distinct",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"distinct"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Autorization",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"root\",\n    \"age\": 21\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/authenticate",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
