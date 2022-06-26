@@ -38,14 +38,13 @@ class UserServiceTest {
     @Test
     void usersOlderThan() {
         List<User> users = List.of(
-                new User().setId(3L).setAge(33).setName("test3"),
-                new User().setId(2L).setAge(22).setName("test2"));
+                new User().setId(3L).setAge(33).setName("test3"));
 
         Mockito.when(userService.usersOlderThan(25))
                 .thenReturn(users);
 
-        User expected = new User().setId(2L).setAge(22).setName("test2");
-        User actual = userService.usersOlderThan(25).get(1);
+        User expected = new User().setId(3L).setAge(33).setName("test3");
+        User actual = userService.usersOlderThan(25).get(0);
 
         assertEquals(expected, actual);
     }
